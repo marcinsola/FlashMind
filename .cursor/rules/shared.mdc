@@ -3,9 +3,9 @@ description:
 globs: 
 alwaysApply: true
 ---
-# AI Rules for {app-name}
+# AI Rules for FlashMind
 
-{project-description}
+FlashMind is a web application that leverages AI to automatically generate educational flashcards from text input, combining spaced repetition learning techniques with modern technology to make the creation of study materials effortless and accessible. The project, built with Astro 5, React 19, and TypeScript 5, aims to solve the time-consuming nature of manual flashcard creation while maintaining high-quality educational content through features like AI-powered generation, manual editing capabilities, and an integrated spaced repetition learning system.
 
 ## Tech Stack
 
