@@ -1,44 +1,96 @@
-# 10x Astro Starter
+# FlashMind
 
-A modern, opinionated starter template for building fast, accessible, and AI-friendly web applications.
+[![Astro](https://img.shields.io/badge/Astro-5-orange.svg)](https://astro.build)
+[![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)](https://www.typescriptlang.org)
+[![Node](https://img.shields.io/badge/Node-22.14.0-green.svg)](https://nodejs.org)
+
+FlashMind is a web application that revolutionizes the learning process through AI-powered flashcard generation and spaced repetition learning. It aims to make the creation of high-quality educational flashcards effortless and accessible to everyone.
+
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Project Scope](#project-scope)
+- [Project Status](#project-status)
+- [License](#license)
+
+## Features
+
+- 🤖 **AI-Powered Flashcard Generation**
+  - Generate flashcards from text input (up to 10,000 characters)
+  - Create 1-200 flashcards per generation
+  - Automatic length validation and optimization
+
+- ✏️ **Flashcard Management**
+  - Accept, reject, or edit generated flashcards
+  - Regenerate only missing flashcards
+
+- 👤 **User Account System**
+  - Secure registration and authentication
+  - Personal flashcard collection management
+  - Activity tracking and metadata logging
+
+- 📚 **Spaced Repetition Learning**
+  - Integration with proven spaced repetition algorithms
 
 ## Tech Stack
 
-- [Astro](https://astro.build/) v5.5.5 - Modern web framework for building fast, content-focused websites
-- [React](https://react.dev/) v19.0.0 - UI library for building interactive components
-- [TypeScript](https://www.typescriptlang.org/) v5 - Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) v4.0.17 - Utility-first CSS framework
+### Frontend
+- **Astro 5** - Core framework for fast, efficient pages
+- **React 19** - Interactive component development
+- **TypeScript 5** - Type-safe development
+- **Tailwind 4** - Utility-first styling
+- **Shadcn/ui** - Accessible React components
 
-## Prerequisites
+### Backend
+- **Supabase**
+  - PostgreSQL database
+  - Built-in authentication
+  - Backend-as-a-Service SDK
 
-- Node.js v22.14.0 (as specified in `.nvmrc`)
-- npm (comes with Node.js)
+### AI Integration
+- **OpenRouter.ai** - Access to various AI models
+  - OpenAI
+  - Anthropic
+  - Google
+  - Cost management and API limits
+
+### DevOps
+- **GitHub Actions** - CI/CD pipelines
+- **Docker** - Containerization
+- **DigitalOcean** - Hosting
 
 ## Getting Started
 
-1. Clone the repository:
+### Prerequisites
 
+- Node.js 22.14.0
+- npm or yarn
+- Git
+
+### Installation
+
+1. Clone the repository
 ```bash
-git clone https://github.com/przeprogramowani/10x-astro-starter.git
-cd 10x-astro-starter
+git clone https://github.com/yourusername/flashmind.git
+cd flashmind
 ```
 
-2. Install dependencies:
-
+2. Install dependencies
 ```bash
 npm install
 ```
 
-3. Run the development server:
-
+3. Set up environment variables
 ```bash
-npm run dev
+cp .env.example .env
 ```
 
-4. Build for production:
-
+4. Start the development server
 ```bash
-npm run build
+npm run dev
 ```
 
 ## Available Scripts
@@ -46,49 +98,43 @@ npm run build
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
+- `npm run test` - Run tests
+- `npm run lint` - Lint code
 
-## Project Structure
+## Project Scope
 
-```md
-.
-├── src/
-│   ├── layouts/    # Astro layouts
-│   ├── pages/      # Astro pages
-│   │   └── api/    # API endpoints
-│   ├── components/ # UI components (Astro & React)
-│   └── assets/     # Static assets
-├── public/         # Public assets
-```
+### MVP Features
+- Web application with basic user authentication
+- AI-powered flashcard generation
+- Manual flashcard editing and management
+- Basic spaced repetition algorithm integration
 
-## AI Development Support
+### Future Plans
+- Advanced spaced repetition algorithm
+- PDF/DOCX import
+- Flashcard sharing
+- Mobile applications
+- Educational platform integrations
 
-This project is configured with AI development tools to enhance the development experience, providing guidelines for:
+### Current Limitations
+- Maximum 10,000 characters per text input
+- Maximum 200 flashcards per generation
+- Limited to web platform
 
-- Project structure
-- Coding practices
-- Frontend development
-- Styling with Tailwind
-- Accessibility best practices
-- Astro and React guidelines
+## Project Status
 
-### Cursor IDE
+The project is currently in MVP development phase. Success metrics include:
 
-The project includes AI rules in `.cursor/rules/` directory that help Cursor IDE understand the project structure and provide better code suggestions.
-
-### GitHub Copilot
-
-AI instructions for GitHub Copilot are available in `.github/copilot-instructions.md`
-
-### Windsurf
-
-The `.windsurfrules` file contains AI configuration for Windsurf.
-
-## Contributing
-
-Please follow the AI guidelines and coding practices defined in the AI configuration files when contributing to this project.
+- 75% AI-generated flashcard acceptance rate
+- 75% of all flashcards created through AI generation
+- Average collection creation time under 5 minutes
+- 100+ weekly active users within first 2 months
+- API error rate below 2% monthly
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+For more information about the project, please contact the development team. 
