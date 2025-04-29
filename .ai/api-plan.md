@@ -126,6 +126,9 @@ For each resource, endpoints adhere to RESTful conventions and are grouped logic
       { "front": "Question text 2", "back": "Answer text 2" }
     ]
     ```
+  - **Validations**
+    - front: max 200 characters
+    - back max 500 characters
   - **Response Payload:** Array of newly created flashcard objects.
 
 - **Get Flashcard Details**
@@ -143,6 +146,9 @@ For each resource, endpoints adhere to RESTful conventions and are grouped logic
     ```json
     { "front": "Updated question", "back": "Updated answer" }
     ```
+  - **Validations**
+    - front: max 200 characters
+    - back max 500 characters
   - **Response Payload:** Updated flashcard object.
 
 - **Generate Flashcards via AI**
