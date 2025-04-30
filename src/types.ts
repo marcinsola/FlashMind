@@ -19,6 +19,26 @@ export type CollectionDto = Tables<"collections">;
 export type CreateCollectionCommand = Pick<TablesInsert<"collections">, "name">;
 
 /**
+ * Response types for collection endpoints
+ */
+export interface CreateCollectionResponseDto {
+  id: number;
+  name: string;
+  user_id: string;
+  created_at: string;
+  updated_at: string;
+  deleted_at: string | null;
+}
+
+export interface ApiErrorResponse {
+  errors: {
+    code?: string;
+    message: string;
+    path?: string[];
+  }[];
+}
+
+/**
  * Command model for updating a collection.
  */
 export type UpdateCollectionCommand = Required<Pick<TablesUpdate<"collections">, "name">>;
