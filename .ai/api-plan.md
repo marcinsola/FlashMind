@@ -160,11 +160,24 @@ For each resource, endpoints adhere to RESTful conventions and are grouped logic
     {
       "text": "Source text for flashcards",
       "count": 10,
-      "existingFlashcards": [{ "id": 5, "front": "Question text", "back": "Answer text" }]
+      "existingFlashcards": [{ "front": "Question text", "back": "Answer text" }]
     }
     ```
     Note: The `existingFlashcards` field is optional. If provided, it includes flashcards already generated to help the model avoid creating duplicate flashcards. The `count` field is final and represents the total number of flashcards to generate, as determined by the frontend.
-  - **Response Payload:** Array of generated flashcard objects, each adhering to length constraints (front ≤200 chars, back ≤500 chars).
+  - **Response Payload:**
+    ```json
+    [
+      {
+        "front": "What is photosynthesis?",
+        "back": "Photosynthesis is the process by which plants convert light energy into chemical energy. During this process, plants use sunlight, water, and carbon dioxide to produce glucose and oxygen."
+      },
+      {
+        "front": "What are the primary reactants in photosynthesis?",
+        "back": "The primary reactants in photosynthesis are carbon dioxide (CO2) and water (H2O)."
+      }
+    ]
+    ```
+    Each object in the array represents a generated flashcard proposal with front text (≤200 chars) and back text (≤500 chars). These flashcards are not yet persisted and await user review.
 
 ### 2.3 Logs Endpoints
 
