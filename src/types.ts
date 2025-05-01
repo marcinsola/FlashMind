@@ -153,3 +153,23 @@ export interface LoginUserCommand {
 export interface LogoutResponseDto {
   message: string;
 }
+
+// ------------------------
+// View Models
+// ------------------------
+
+/**
+ * View model for flashcard in the generation UI.
+ */
+export interface FlashcardViewModel extends FlashcardProposalDTO {
+  id: string;
+  status: "pending" | "accepted" | "editing";
+}
+
+/**
+ * Form data for flashcard generation.
+ */
+export interface GenerateFormData {
+  text: string;
+  count: number;
+}
